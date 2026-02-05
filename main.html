@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Xanh Lá - Đậu Thúy Quỳnh</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(to bottom, #f0fdf4, #e6f4ea);
+      color: #1e3a2f;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4ade80, #22c55e);
+      color: white;
+      text-align: center;
+      padding: 80px 20px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 3.8rem);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      font-weight: 400;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 36px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
+
+    .card-header {
+      background: #ecfdf5;
+      padding: 24px 28px;
+      border-bottom: 3px solid #86efac;
+    }
+
+    .card-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.85rem;
+      color: #15803d;
+      margin: 0;
+    }
+
+    .card-content {
+      padding: 28px;
+    }
+
+    /* Giới thiệu */
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .intro img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #86efac;
+      box-shadow: 0 6px 20px rgba(34,197,94,0.25);
+    }
+
+    .intro div p {
+      font-size: 1.15rem;
+      margin: 10px 0;
+      margin-left: 20px;
+    }
+
+    .intro strong {
+      color: #15803d;
+    }
+
+    /* Danh sách */
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    li {
+      font-size: 1.1rem;
+      padding-left: 22px;
+      position: relative;
+    }
+
+
+
+    /* Hình ảnh */
+    .card-content img {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 16px;
+      display: block;
+      margin: 28px auto;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .card-content img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Mục tiêu */
+    .goals p {
+      font-size: 1.15rem;
+      margin: 16px 0;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .goals p::before {
+
+      position: absolute;
+      left: 0;
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #ecfdf5;
+      text-align: center;
+      padding: 40px 20px;
+      color: #1e3a2f;
+      border-top: 4px solid #86efac;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social a {
+      color: #15803d;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #16a34a;
+      text-decoration: underline;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 60px 15px 80px; }
+      .intro { flex-direction: column; text-align: center; }
+      .intro img { margin-bottom: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BÀI THỰC HÀNH</h1>
+    <p>GIỚI THIỆU VỀ BẢN THÂN, TRƯỜNG, LỚP, CÂU LẠC BỘ</p>
+  </header>
+
+  <main>
+
+    <!-- Giới thiệu -->
+    <div class="card">
+      <div class="card-header">
+        <h2>Xin chào! Giới thiệu bản thân</h2>
+      </div>
+      <div class="card-content intro">
+        <img src="https://img.thuthuatphanmem.vn/uploads/2018/09/26/hinh-nen-chu-meo-con-giua-nhung-bong-hoa-dep_053030421.jpg" alt="Đậu Thúy Quỳnh">
+        <div>
+          <p>Mình là một cô gái yêu thiên nhiên, thích mọi thứ màu <strong>xanh lá</strong> 🌱</p>
+          <p><strong>Tên:</strong> Đậu Thúy Quỳnh</p>
+          <p><strong>Sinh ngày:</strong> 11/03/2008</p>
+          <p><strong>Học tập tại:</strong> Trường THPT Chuyên Hùng Vương (Gia Lai)</p>
+          <p><strong>Lớp:</strong> 12C2A</p>
+          <p><strong>CLB đang tham gia:</strong> HV Capture & Blink</p>
+          <p>Hiện tại mình đang cố gắng học tốt, sống lành mạnh và lan tỏa năng lượng tích cực đến mọi người ạ 💚</p>
+        </div>
+      </div>
+    </div>
+
+        <!-- Sở thích -->
+    <div class="card">
+      <div class="card-header">
+        <h2>Trường THPT Chuyên Hùng Vương</h2>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li> Trường Trung học phổ thông chuyên Hùng Vương (Gia Lai) là một trong những trường trung học phổ thông chuyên nổi bật tại khu vực Tây Nguyên. Được thành lập vào năm 1993, trường đã gặt hái nhiều thành tựu trong việc đào tạo học sinh giỏi và bồi dưỡng nhân tài cho tỉnh Gia Lai. Trường hiện có 13 lớp chuyên với 455 chỉ tiêu tuyển sinh cho năm học 2024-2025, bao gồm các môn như Toán, Ngữ văn, Tiếng Anh, Hóa học, và nhiều môn khác. Trường cũng đã được công nhận đạt chuẩn quốc gia vào năm 2018 và được đầu tư xây dựng mới để nâng cao chất lượng giáo dục.</li>
+        </ul>
+        <img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/473596661_918826490372775_253389222575052166_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeEbQ0x2fv1sfgBzFV_Nz5d8y_vDXGdQoMbL-8NcZ1CgxrloynhL420fSeQhU7r4LRNg4uGrdWDvPQfwca8r5Jgs&_nc_ohc=0T3N4R0CCboQ7kNvwG1ek7H&_nc_oc=AdnYaEsdCfcW00hnJne-BVkowgEOBF4asSlGErkwNiLJ9HzFdVjkbMVr1x53aPLCXlQ&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=WasEJ66XTj8oA5kUuHp_EQ&oh=00_AfsXt0SbwmWt390Y20Oy2KoDr2J8NEPpACz2sk4gQXZSUw&oe=6989CAE9" alt="nothing">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>HV Capture & Blink</h2>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>Mỗi khoảnh khắc đều là một mảnh ghép, ghép lại thành bức tranh thanh xuân rực rỡ!</li>
+          <li>Nhất quỷ nhì ma, thứ ba học trò, ống kính không hướng vào bảng, mà bắt trọn những pha quậy tới bến. Mọi khoảnh khắc đều đáng nhớ, mọi góc máy đều có chất riêng.</li>
+          <li>Email: hvcaptureandblinkk9@gmail.com</li>
+        </ul>
+        <img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/487507472_971096145175929_310544033631560170_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG75wn5BaaVJqPoLZXCePlM6XO-Ed_k-KTpc74R3-T4pGCtHvEtox2R0SI6a5BIGflFnOPby83wsMf1X-7pP-7c&_nc_ohc=CsiXE_W-_78Q7kNvwHoen10&_nc_oc=AdmaU8cvUVdD9TMHkOWltoE0npq_1yJSGtQBBySEbuM35AuFSj9U9MMt6j1UgbnsiZA&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=tw-MUfjxpaAq4walFfUJrg&oh=00_Afu-oqqysh3GEmSqx3vVgdT3I6nNbBsHL4mqfpR8S5cUbA&oe=6989D546" alt="gnihton">
+      </div>
+    </div>
+
+    <!-- Sở thích -->
+    <div class="card">
+      <div class="card-header">
+        <h2>Những điều mình thích</h2>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>Trồng cây cảnh và chăm sóc vườn nhỏ</li>
+          <li>Đi dạo công viên, hít thở không khí trong lành</li>
+          <li>Đọc sách về phát triển bản thân & thiên nhiên</li>
+          <li>Chụp ảnh lá cây, hoa cỏ, hoàng hôn</li>
+        </ul>
+        <img src="https://tieudung.kinhtedothi.vn/upload_images/images/2020/06/25/du-lich-quy-nhon-binh-dinh_1.jpg">
+      </div>
+    </div>
+
+    <!-- Mục tiêu -->
+    <div class="card">
+      <div class="card-header">
+        <h2>Mục tiêu trong tương lai</h2>
+      </div>
+      <div class="card-content goals">
+        <p>Học thật giỏi để đỗ vào ngôi trường đại học mình mơ ước</p>
+        <p>Đi du lịch thật nhiều, khám phá những cánh rừng, bãi biển đẹp</p>
+        <p>Sống khỏe mạnh, hạnh phúc và giúp được nhiều người yêu thiên nhiên hơn</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    </div>
+    <p>© 2026 Đậu Thúy Quỳnh • Làm với rất nhiều yêu thương 🌱</p>
+  </footer>
+
+</body>
+</html>
